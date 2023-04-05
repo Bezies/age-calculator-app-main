@@ -1,0 +1,225 @@
+body {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    width: 100vw;
+    height: 100vh;
+    background-color: hsl(0, 0%, 94%);
+}
+
+
+/* MAIN  */
+
+.sr-only {
+position: absolute ;
+left: -10000px;
+width: 1px;
+height: 1px;
+top: auto;
+overflow: hidden; 
+}
+
+
+main {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 800px;
+    height: 500px;
+    background-color: white;
+    border-radius: 20px 20px 150px 20px;
+}
+
+
+/* INPUTS  */
+
+form {
+    display: flex;
+    margin: 30px 20px;
+    border-bottom: 1px solid hsl(0, 0%, 86%);
+    height: 30%;
+    width: 80%;
+    position: relative;
+}
+
+.arrow {
+    content: '';
+    background-image: url(assets/images/icon-arrow.svg);
+    background-repeat: no-repeat;
+    height: 70px;
+    width: 70px;
+    background-color: hsl(259, 100%, 65%);
+    border-radius: 50px;
+    background-position: center;
+    position: absolute;
+    top: 140px;
+    left: 600px;
+    cursor: pointer;
+    border: none;
+}
+
+.arrow:hover {
+    background-color: hsl(0, 0%, 8%);
+}
+
+
+.box-day, .box-month, .box-year {
+    display: flex;
+    flex-direction: column;
+    margin: 0 20px;
+}
+
+.box-day label, .box-month label, .box-year label {
+    color: hsl(0, 1%, 44%);
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    margin-bottom: 5px;
+}
+
+.box-day input, .box-month input, .box-year input {
+    font-size: 28px;
+    font-weight: 800;
+    width: 100px;
+    border: 1px solid hsl(0, 1%, 44%);
+    border-radius: 5px;
+    padding: 10px;
+    outline: none;
+    cursor: pointer;
+}
+
+form small {
+    color: red;
+    font-style: italic;
+    font-weight: 400;
+    font-size: 10px;
+    margin-top: 5px;
+}
+
+::placeholder {
+    font-weight: 800;
+}
+
+
+
+/* RESULTS  */
+
+.result {
+    width: 80%;
+    margin: 30px 40px;
+}
+
+.result p {
+    font-size: 80px;
+    font-weight: 800;
+    font-style: italic;
+    margin: 0;
+    line-height: 90px;
+}
+
+.result span {
+    color: hsl(259, 100%, 65%);
+}
+
+
+
+
+
+
+
+
+/* FOOTER  */
+
+.attribution { 
+    font-size: 11px; 
+    text-align: center; 
+}
+.attribution a { color: hsl(228, 45%, 44%); }
+
+
+
+/* MEDIA QUERIES  */
+
+@media screen and (max-width: 800px) {
+    
+    /* MAIN  */
+
+    main {
+        width: 500px;
+        height: 600px;
+    }
+
+
+    /* INPUTS  */
+
+
+.arrow {
+    top: 170px;
+    left: 200px;
+}
+
+
+.box-day input, .box-month input, .box-year input {
+    font-size: 25px;
+    width: 80px;
+}
+
+
+    /* RESULTS  */
+
+.result {
+    width: 80%;
+    margin: 30px 40px;
+}
+
+.result p {
+    font-size: 60px;
+}
+
+}
+
+
+
+
+
+@media screen and (max-width: 450px) {
+    
+    /* MAIN  */
+
+    main {
+        width: 350px;
+        height: 500px;
+    }
+
+
+    /* INPUTS  */
+
+
+.arrow {
+    top: 140px;
+    left: 130px;
+}
+
+
+.box-day input, .box-month input, .box-year input {
+    font-size: 15px;
+    width: 40px;
+}
+
+
+    /* RESULTS  */
+
+.result {
+    width: 80%;
+    margin: 80px auto;
+}
+
+.result p {
+    font-size: 50px;
+    line-height: 50px;
+}
+
+
+}
